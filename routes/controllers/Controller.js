@@ -38,12 +38,13 @@ const compareLogin = async (req, res) => {
 const crearImagen = async (req, res) => {
     const fetch = (await import('node-fetch')).default;
     const { prompt } = req.body;
-    const url = "https://stablediffusionapi.com/api/v3/text2img";
-    const apiKey = "s71l9hsMbmE1bpb98GJ22b9aMk4wHpb65ZX7Ra8yUE2YW1C6Vb2yIIWXFPFT";
+    const url = "https://stablediffusionapi.com/api/v3/dreambooth";
+    const apiKey = "73bYaWf4IR0GXJUhOVt5p4iPqq2pMsYJDQQ2ErjNlpDD9iZv9lB4iLsiXj9A";
 
     const bodyData = {
         key: apiKey,
         prompt: prompt,
+        model_id: "midjourney",
         negative_prompt: "low quality",
         width: "512",
         height: "512",
